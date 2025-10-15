@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  brain:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.brain
+    environment:
+      - NVIDIA_NIM_API_KEY=${NVIDIA_NIM_API_KEY}
+      - AWS_REGION=${AWS_REGION}
+    volumes:
+      - ./src/brain:/app/brain
+      - ./outputs:/app/outputs
+    networks:
+      - genesis-net
+    depends_on:
+      - memory-store
+
+  senses:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.senses
+    environment:
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+    volumes:
+      - ./src/senses:/app/senses
+    networks:
+      - genesis-net
+
+  hands:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.hands
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    volumes:
+      - ./src/hands:/app/hands
+      - ./outputs:/app/outputs
+    networks:
+      - genesis-net
+
+  memory-store:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+    networks:
+      - genesis-net
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.brain
+    command: python monitoring/dashboard.py
+    ports:
+      - "8080:8080"
+    networks:
+      - genesis-net
+
+networks:
+  genesis-net:
+    driver: bridge
+
+volumes:
+  chroma-data:

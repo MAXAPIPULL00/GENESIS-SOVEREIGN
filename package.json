@@ -1,0 +1,32 @@
+{
+  "name": "genesis-sovereign",
+  "version": "0.1.0",
+  "description": "Autonomous Software Creation Engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development",
+    "lint": "eslint src/**/*.js"
+  },
+  "keywords": [
+    "ai",
+    "autonomous",
+    "swarm",
+    "multi-agent",
+    "aws",
+    "nvidia"
+  ],
+  "author": "Genesis Team",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "ws": "^8.16.0"
+  }
+}

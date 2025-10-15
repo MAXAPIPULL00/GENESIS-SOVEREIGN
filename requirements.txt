@@ -1,0 +1,42 @@
+# GENESIS-SOVEREIGN Python Dependencies
+
+# Core Framework
+anthropic>=0.18.0
+openai>=1.12.0
+langchain>=0.1.0
+langgraph>=0.0.20
+
+# AWS Integration
+boto3>=1.34.0
+sagemaker>=2.200.0
+
+# Data Sources
+praw>=7.7.1  # Reddit
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+aiohttp>=3.9.0
+
+# Vector & Embeddings
+chromadb>=0.4.22
+sentence-transformers>=2.3.0
+faiss-cpu>=1.7.4
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+pydantic>=2.5.0
+rich>=13.7.0
+
+# Monitoring
+prometheus-client>=0.19.0
+opentelemetry-api>=1.22.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+
+# Development
+black>=24.1.0
+ruff>=0.1.0
+mypy>=1.8.0
