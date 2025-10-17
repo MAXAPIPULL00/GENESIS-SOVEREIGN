@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\n🌟 Genesis: The beginning of autonomous creation\n\nInitial project structure for GENESIS-SOVEREIGN:\n- Multi-agent brain architecture (Alpha, Beta, Gamma, Delta, Epsilon)\n- Signal processing system for global developer activity\n- Creation interface for autonomous software generation\n- Evolution engine for continuous improvement\n- Complete infrastructure setup (Docker, K8s, AWS)\n- Local development environment configuration\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(\".venv/Scripts/python.exe\" -m pip install --upgrade pip)",
+      "Bash(xxd:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

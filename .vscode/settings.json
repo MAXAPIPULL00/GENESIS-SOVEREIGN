@@ -1,0 +1,76 @@
+{
+  "window.title": "🌟 GENESIS-SOVEREIGN - ${activeEditorShort}",
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#1a1a2e",
+    "titleBar.activeForeground": "#00d4ff",
+    "statusBar.background": "#16213e",
+    "statusBar.foreground": "#00d4ff"
+  },
+  "editor.fontFamily": "'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "editor.bracketPairColorization.enabled": true,
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.venvPath": "${workspaceFolder}",
+  "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.formatting.provider": "black",
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "files.associations": {
+    "*.yaml": "yaml",
+    "*.yml": "yaml",
+    "Dockerfile*": "dockerfile"
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.venv": true,
+    "**/.env": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.venv": true,
+    "**/outputs/created-projects": true
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "'Cascadia Code', Consolas",
+  "terminal.integrated.env.windows": {
+    "VIRTUAL_ENV": "${workspaceFolder}\\.venv"
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": ["-NoExit", "-Command", "& {if (Test-Path '${workspaceFolder}\\.venv\\Scripts\\Activate.ps1') { & '${workspaceFolder}\\.venv\\Scripts\\Activate.ps1' }}"]
+    }
+  },
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "yaml.schemas": {
+    "kubernetes": [
+      "infrastructure/kubernetes/*.yaml",
+      "infrastructure/aws/eks/*.yaml"
+    ]
+  },
+  "todo-tree.general.tags": ["TODO", "FIXME", "HACK", "SIGNAL", "HEX"],
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "#00d4ff",
+    "type": "text"
+  }
+}
