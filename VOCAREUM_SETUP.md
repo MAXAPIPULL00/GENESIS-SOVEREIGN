@@ -77,7 +77,7 @@ AWS_SESSION_TOKEN=...if-provided
 AWS_REGION=us-east-1
 
 # NVIDIA NIM (already set)
-NVIDIA_NIM_API_KEY=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
+NVIDIA_NIM_API_KEY=nvapi-YOUR_NEW_KEY_HERE
 
 # GitHub (optional for now)
 GITHUB_TOKEN=your-github-token

@@ -113,7 +113,7 @@ $100 credit = ~24 hours of NVIDIA NIM running
 
 ```powershell
 # 1. Show NVIDIA NIM working
-$env:NVIDIA_NIM_API_KEY="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"
+$env:NVIDIA_NIM_API_KEY="nvapi-YOUR_NEW_KEY_HERE"
 python test_nim_simple.py
 
 # 2. Show different code generation
