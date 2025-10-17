@@ -15,7 +15,7 @@
 1. Open browser → https://nvidia.vocareum.com
 2. Login:
    - Email: `devpost+0311@vocareum.com`
-   - Password: `2WE9AnwSny6`
+   - Password: `[REDACTED]`
 3. Find "AWS Console" or "Account Details" button
 4. Copy the credentials shown (looks like):
    ```

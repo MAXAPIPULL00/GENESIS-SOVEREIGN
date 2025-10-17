@@ -6,7 +6,7 @@
 
 ```
 Email: devpost+0311@vocareum.com
-Password: 2WE9AnwSny6
+Password: [REDACTED - Check original Vocareum email]
 ```
 
 ⚠️ **IMPORTANT**: $100 credit = ~24 hours of NVIDIA NIM on EKS/SageMaker
